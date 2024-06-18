@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/pollution.css" />
+    <link rel="stylesheet" href="/utility.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo-name">
+          <img src="/assets/logo.png" alt="" height="50" width="40" />
+          <span><b>AirInsight</b></span>
+        </div>
+        <div class="right-cnt">
+          <a href="/"><p>Home</p></a>
+          <a href="/about"><p>About</p></a>
+          <a href="/"> <p>Contacts</p></a>
+        </div>
+      </div>
+    </nav>
+    <div class="loader-data">
+      <button class="loader__btn">
+        <div class="loader"></div>
+        Loading ...
+      </button>
+    </div>
+    <div class="content">
+      <div class="location-title">
+        <p>Enter Location</p>
+      </div>
+      <div class="location-search">
+        <div class="search">
+          <input id="input-city" placeholder="Patna , India" type="text" />
+          <button id="btn-submit" type="submit">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="section-cards">
+      <div class="cards lft-card">
+        <div class="lct-title">
+          <p class="main-title">Air Quality Index</p>
+          <p class="secondary-title">
+            Real-time PM2.5, PM10 air pollution level
+          </p>
+        </div>
+        <div class="aqi">
+          <p id="aqi-data" class="bold">(AQI-US)</p>
+          <p id="result" class="bold"></p>
+        </div>
+        <div class="img">
+          <img id="airQuality-img" src="/assets/airQuality.png" alt="" />
+        </div>
+      </div>
+      <!-- <div class="cards rt-card">
+        <div class="small-card">
+          <div class="chemicals"></div>
+          <div class="percentage"></div>
+          <div class="aqi"></div>
+        </div>
+      </div> -->
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

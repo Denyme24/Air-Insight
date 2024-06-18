@@ -1,0 +1,44 @@
+CO
+: 
+{concentration: 547.41, aqi: 6}
+NO2
+: 
+{concentration: 6.26, aqi: 7}
+O3
+: 
+{concentration: 220.3, aqi: 240}
+PM2.5
+: 
+{concentration: 104.43, aqi: 172}
+PM10
+: 
+{concentration: 123.5, aqi: 84}
+SO2
+: 
+{concentration: 15.5, aqi: 22}
+overall_aqi
+: 
+240
+[[Prototype]]
+: 
+Object
+﻿
+
+//   console.log(result);
+    //     console.log(concentration_CO)
+    //     console.log(aqi_CO)
+    //     console.log(concentration_NO2)
+    //     console.log(aqi_NO2)
+    //     console.log(concentration_O3)
+    //     console.log(aqi_O3)
+    //     console.log(concentration_PM2)
+    //     console.log(aqi_PM2)
+    //     console.log(concentration_PM10)
+    //     console.log(aqi_PM10)
+    //     console.log(concentration_SO2)
+    //     console.log(aqi_SO2)
+    //     console.log(overall_aqi)
+
+   pink -> f2dee9
+   green -> #e1edde
+  moderate-> #f6e1db
