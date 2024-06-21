@@ -29,7 +29,7 @@ const chatMessage = document.getElementById("chat-messages");
 
 sendMsg.addEventListener("click", (e) => {
   inputValue = input.value;
-  console.log(inputValue);
+  // console.log(inputValue);
   sendMessage();
 });
 
