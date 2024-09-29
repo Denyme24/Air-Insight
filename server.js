@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require("path")
+const path = require("path");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
@@ -12,8 +12,8 @@ const port = process.env.PORT || 3000;
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 
 app.post("/assistance", async (req, res) => {
   const { message } = req.body;
@@ -29,14 +29,14 @@ app.post("/assistance", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html" , {root : __dirname} );
+  res.sendFile("index.html", { root: __dirname });
 });
 
-app.get("/prediction" , (req, res)=> {
-  res.sendFile("prediction.html" , {root : __dirname})
-})
-app.get('/about', (req, res) => {
-  res.sendFile('about.html', { root: __dirname });
+app.get("/prediction", (req, res) => {
+  res.sendFile("prediction.html", { root: __dirname });
+});
+app.get("/about", (req, res) => {
+  res.sendFile("about.html", { root: __dirname });
 });
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

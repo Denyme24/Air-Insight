@@ -1,6 +1,5 @@
-
 function sendMessage() {
-  const inputValue = input.value.trim(); 
+  const inputValue = input.value.trim();
   if (inputValue === "") return;
 
   appendMessage("You: " + inputValue, "human");
@@ -33,30 +32,30 @@ sendMsg.addEventListener("click", (e) => {
   sendMessage();
 });
 
-function sendMessage() {
-  const inputValue = input.value.trim(); 
-  if (inputValue === "") return;
+// function sendMessage() {
+//   const inputValue = input.value.trim();
+//   if (inputValue === "") return;
 
-  appendMessage("You: " + inputValue, "human");
+//   appendMessage("You: " + inputValue, "human");
 
-  fetch("/assistance", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ message: inputValue }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      appendMessage("AI: " + data.text, "ai");
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      appendMessage("Error fetching response.");
-    });
+//   fetch("/assistance", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ message: inputValue }),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       appendMessage("AI: " + data.text, "ai");
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//       appendMessage("Error fetching response.");
+//     });
 
-  input.value = "";
-}
+//   input.value = "";
+// }
 
 function appendMessage(message, type) {
   const messageElement = document.createElement("div");
