@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  airinsight:
+    image: denyme24/airinsight-nodejs
+    container_name: airinsight-container-new
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./Dockerfile
